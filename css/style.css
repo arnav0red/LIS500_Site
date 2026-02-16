@@ -1,0 +1,108 @@
+.action-bar
+{
+    display: flex;
+    gap: 1rem;
+    padding: 0.1rem;
+    justify-content: center;
+
+}
+
+.action-bar a
+{
+    background-color: #c62828;
+    /* red button */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.action-bar a:hover
+{
+    background-color: #b71c1c;
+    transform: translateY(-1px);
+}
+
+.action-bar a.active
+{
+    background-color: #8e0000;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+header h1,
+header h2,
+header p
+{
+    margin: 0.5rem 0;
+}
+
+.title-block
+{
+    text-align: center;
+    /* margin: 2.5rem 1rem 1.5rem; */
+}
+
+.title-block h1
+{
+    font-size: 2.6rem;
+    border-bottom: 4px solid #c62828;
+    display: inline-block;
+    line-height: 1.1;
+
+    font-weight: 800;
+    /* letter-spacing: -0.02em; */
+    margin-bottom: 0rem;
+    color: #111;
+}
+
+
+.title-block p
+{
+    /* font-size: 0.1px; */
+    color: #555;
+    /* max-width: 720px; */
+    margin: 0 auto;
+    line-height: 1;
+}
+
+main h1,
+main h2,
+main h3
+{
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+main h2
+{
+    font-size: 1.6rem;
+    padding-bottom: 0.3rem;
+}
+
+main p
+{
+    margin-bottom: 1.2rem;
+}
+
+main .banner
+{
+    display: block;
+    /* makes margin auto work */
+    margin: 1rem auto;
+    /* 1rem top/bottom, auto left/right */
+    max-width: 60%;
+    /* prevents overflow on small screens */
+    height: auto;
+    /* maintain aspect ratio */
+}
+
+main .headshot
+{
+    width: auto;
+    height: 10rem;
+    margin: 1rem auto;
+}

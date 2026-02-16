@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIS 500: Code and Power</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+
+      const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+    </script>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum mi commodo, eleifend metus a, faucibus metus. Cras porttitor ligula in egestas luctus. Donec enim quam, interdum in metus vel, finibus malesuada odio. Aenean tincidunt leo sed libero convallis pulvinar. Donec et convallis tortor. Vivamus magna eros, varius non ultrices sit amet, lobortis a purus. Mauris vitae ex vitae lectus varius rhoncus. Donec nec nulla quis neque ornare interdum. Aliquam pulvinar magna ligula, a consectetur tellus aliquet et.
+
+</p>
+        </body>
+
+</html>
