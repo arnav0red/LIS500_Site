@@ -7,28 +7,119 @@
     <title>LIS 500: Code and Power</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div id="header"></div>
     <script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header").innerHTML = html;
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html =>
+            {
+                document.getElementById("header").innerHTML = html;
 
-      const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+                const currentPage =
+                    window.location.pathname.split("/").pop() || "index.html";
 
-      document.querySelectorAll("nav a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    });
+                document.querySelectorAll("nav a").forEach(link =>
+                {
+                    if (link.getAttribute("href") === currentPage)
+                    {
+                        link.classList.add("active");
+                    }
+                });
+            });
     </script>
-    <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum mi commodo, eleifend metus a, faucibus metus. Cras porttitor ligula in egestas luctus. Donec enim quam, interdum in metus vel, finibus malesuada odio. Aenean tincidunt leo sed libero convallis pulvinar. Donec et convallis tortor. Vivamus magna eros, varius non ultrices sit amet, lobortis a purus. Mauris vitae ex vitae lectus varius rhoncus. Donec nec nulla quis neque ornare interdum. Aliquam pulvinar magna ligula, a consectetur tellus aliquet et.
+    <main class="resources-page">
+        <h1>Resources for Implicit Bias</h1>
+        <section class="resource-category">
+            <p>
+                Welcome to the resource page on implicit bias (IB). This guide is designed for students who are just
+                starting to
+                explore the ways our thoughts, experiences, and social context can influence how we perceive and
+                interact
+                with
+                others. Here, you'll find explanations, key concepts like intersectionality, the Implicit Bias Test
+                (IBT),
+                and
+                links to beginner-friendly resources.
+            </p>
+        </section>
+        <section class="resource-category">
+            <h2>What is Implicit Bias?</h2>
+            <p>
+                Implicit bias, also known as implicit prejudice or implicit attitude, is a negative attitude, of which
+                one is not consciously aware, against a specific social group.
+            </p>
+            <p>
+                Implicit bias is thought to be shaped by experience and based on learned associations between particular
+                qualities and social categories, including race and/or gender. Individuals’ perceptions and behaviors
+                can be
+                influenced by the implicit biases they hold, even if they are unaware they hold such biases. Implicit
+                bias
+                is an
+                aspect of implicit social cognition: the phenomenon that perceptions, attitudes, and stereotypes can
+                operate
+                prior to conscious intention or endorsement.
+            </p>
+            <p>
+                Why it matters:
+                Even when we consciously believe in equality and fairness, implicit biases can influence everyday
+                decisions—like
+                how we interact with classmates, professors, or colleagues. Recognizing these biases is the first step
+                toward
+                creating a more inclusive environment.
+            </p>
+            Learn more:
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK589697/">Understanding Implicit Bias - National Library of
+                Medecine</a>
 
-</p>
-        </body>
+
+        </section>
+        <section class="resource-category">
+
+            <h2> The Implicit Association Test (IAT)</h2>
+            <p>
+                The IAT is a tool designed to help people discover their own unconscious biases. It's not a judgment,
+                but a
+                starting point for reflection. Many students find it surprising to learn how their brain associates
+                different
+                traits with gender, race, or other social categories.
+            </p>
+            Try it yourself:
+            <a href="https://implicit.harvard.edu/implicit/takeatest.html">Project Implicit - Take the Test</a>
+
+
+        </section>
+        <section class="resource-category">
+            <h2>
+                Intersectionality</h2>
+            <p>
+
+                Intersectionality is a term coined in the late 1980s by American academic Kimberlé Crenshaw. It
+                describes
+                how
+                race, class, gender and other personal characteristics 'intersect' with one another and overlap. She
+                wanted
+                to
+                remind people that when thinking about equality, we need to think beyond singular attributes like skin
+                colour
+                and gender, and recognise that all humans have more than one characteristic that may be subject to
+                discrimination or hostility. For example, while a woman may experience sexism, a black lesbian may be at
+                risk of
+                experiencing not only sexism but also racism and homophobia. However, by listening to and respecting
+                people
+                when
+                they share their lives with you, you can being to understand their intersectional experiences.
+            </p>
+
+            Resources:
+            <a href="https://equality-diversity.ed.ac.uk/students/intersectionality">Intersectionality and Privilege -
+                The University of Edinburgh</a>
+
+        </section>
+        <h1>
+            Remember: Implicit bias is part of being human. Learning about it is about awareness and growth, not guilt.
+        </h1>
+</body>
 
 </html>
