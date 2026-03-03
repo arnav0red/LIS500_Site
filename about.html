@@ -2,24 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIS 500: Code and Power</title>
+    <title>LIS 500: Code and Power — About Us</title>
+    <!-- External stylesheet for all page styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Header placeholder — shared navigation loaded from header.html -->
     <div id="header"></div>
     <script>
+        // Fetch and inject the shared header, then highlight current page in nav
         fetch("header.html")
             .then(res => res.text())
             .then(html =>
             {
                 document.getElementById("header").innerHTML = html;
-
                 const currentPage =
                     window.location.pathname.split("/").pop() || "index.html";
-
                 document.querySelectorAll("nav a").forEach(link =>
                 {
                     if (link.getAttribute("href") === currentPage)
@@ -29,32 +31,51 @@
                 });
             });
     </script>
-    <div class="about-container">
-        <img class="headshot" src="Images/headshot_arnav.png" alt="Arnav Mohakud Headshot">
 
-        <div class="about-text">
-            <h2>Arnav Mohakud</h2>
-            <p>Hi! My name is Arnav Mohakud. I am a senior doing a Computer Science major, and minors in Data Science
-                and
-                Mathematics. I am interested in learning about the social background behind the tech scene, and its
-                history
-                and development. I want understand the biasses that both I as well as other people hold, and how we can
-                improve awareness and equity in technology and information work.</p>
+    <!-- Main content wrapped in page-wrapper div for consistent margins and readable width -->
+    <main>
+        <div class="page-wrapper">
+            <!-- Page heading -->
+            <h1 class="section-title">About Us</h1>
+
+            <!-- Arnav's profile section — uses flexbox layout with headshot and bio text -->
+            <div class="about-container">
+                <img class="headshot" src="Images/headshot_arnav.png"
+                    alt="Portrait photo of Arnav Mohakud, a senior computer science student">
+                <div class="about-text">
+                    <h2>Arnav Mohakud</h2>
+                    <p>Hi! My name is Arnav Mohakud. I am a senior doing a Computer Science major, and minors in Data
+                        Science
+                        and
+                        Mathematics. I am interested in learning about the social background behind the tech scene, and
+                        its
+                        history
+                        and development. I want to understand the biases that both I as well as other people hold, and
+                        how we can
+                        improve awareness and equity in technology and information work.</p>
+                </div>
+            </div>
+
+            <!-- Visual divider between the two team member profiles for better separation -->
+            <hr class="about-divider">
+
+            <!-- Siddhanth's profile section — same layout as above for consistency -->
+            <div class="about-container">
+                <img class="headshot" src="Images/headshot_siddhanth.jpg"
+                    alt="Portrait photo of Siddhanth Pandey, a computer science student">
+                <div class="about-text">
+                    <h2>Siddhanth Pandey</h2>
+                    <p>I'm a computer science student interested in both building technology and understanding its social
+                        impact. In LIS 500: Code and Power, I'm exploring how societal factors like bias, labor, and
+                        access
+                        shape computing, and how computing, in turn, affects society. I'm excited to examine the human
+                        side of
+                        technology alongside the technical.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="about-container">
-
-        <img class="headshot" src="Images/headshot_siddhanth.jpg" alt="Siddhanth Pandey Headshot">
-        <div class="about-text">
-
-            <h2>Siddhanth Pandey</h2>
-            <p>I'm a computer science student interested in both building technology and understanding its social
-                impact. In LIS 500: Code and Power, I'm exploring how societal factors like bias, labor, and access
-                shape computing, and how computing, in turn, affects society. I'm excited to examine the human side of
-                technology alongside the technical.
-            </p>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>
