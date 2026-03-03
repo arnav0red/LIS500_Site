@@ -2,24 +2,27 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding and responsive viewport for mobile devices -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIS 500: Code and Power</title>
+    <!-- External stylesheet — all styling is CSS-driven, no inline styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Header placeholder — populated dynamically from header.html -->
     <div id="header"></div>
     <script>
+        // Fetch shared header component and inject it into the page
         fetch("header.html")
             .then(res => res.text())
             .then(html =>
             {
                 document.getElementById("header").innerHTML = html;
-
+                // Highlight the current page link in the navigation bar
                 const currentPage =
                     window.location.pathname.split("/").pop() || "index.html";
-
                 document.querySelectorAll("nav a").forEach(link =>
                 {
                     if (link.getAttribute("href") === currentPage)
@@ -29,22 +32,51 @@
                 });
             });
     </script>
-    <main>
-        <img class="banner" src="Images/LIS500Banner.png" alt="LIS 500 Banner">
-        <section class="welcome-panel">
-            <p class="group">
 
-                Group: Arnav Mohakud, Siddhanth Pandey
-            </p>
-            <p>Welcome to our page for LIS 500: Code and Power. This space will be used to share course materials,
-                updates,
-                and reflections as we explore how technology and code are shaped by power and societal bias. Throughout
-                the
-                course, we will examine how assumptions about race, gender, class, and access become embedded in
-                information
-                systems, and what that means for equity and responsibility in technology and information work. 
-            </p>
-        </section>
+    <!-- Main content area wrapped in page-wrapper div for consistent margins -->
+    <main>
+        <div class="page-wrapper">
+            <!-- Course banner image -->
+            <img class="banner" src="Images/LIS500Banner.png"
+                alt="LIS 500 Code and Power course banner displaying the course title and theme">
+
+            <!-- Welcome section introducing the course and group members -->
+            <section class="welcome-panel">
+                <p class="group">
+                    Group: Arnav Mohakud, Siddhanth Pandey
+                </p>
+                <p>Welcome to our page for LIS 500: Code and Power. This space will be used to share course materials,
+                    updates,
+                    and reflections as we explore how technology and code are shaped by power and societal bias. Throughout
+                    the
+                    course, we will examine how assumptions about race, gender, class, and access become embedded in
+                    information
+                    systems, and what that means for equity and responsibility in technology and information work.
+                </p>
+            </section>
+
+            <!-- Preview cards section — gives visitors a glimpse of other pages on the site -->
+            <h2 class="section-title">Explore Our Work</h2>
+            <div class="preview-grid">
+                <!-- About Us preview card -->
+                <a href="about.html" class="preview-card">
+                    <h3>About Us</h3>
+                    <p>Learn about the team behind this project and our perspectives on technology, equity, and power.</p>
+                </a>
+                <!-- Resources preview card -->
+                <a href="resources.html" class="preview-card">
+                    <h3>Resources for Implicit Bias</h3>
+                    <p>A guide to implicit bias, the IAT, and intersectionality — designed for students encountering
+                        these ideas for the first time.</p>
+                </a>
+                <!-- Tech Heroes preview card -->
+                <a href="tech_hero.html" class="preview-card">
+                    <h3>Tech Heroes</h3>
+                    <p>Profiles of people of color challenging norms in tech and using technology for equity and social
+                        justice.</p>
+                </a>
+            </div>
+        </div>
     </main>
 </body>
 
