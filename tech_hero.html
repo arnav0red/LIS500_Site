@@ -2,24 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIS 500: Code and Power</title>
+    <title>LIS 500: Code and Power — Tech Heroes</title>
+    <!-- External CSS stylesheet — no inline styles used -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Header placeholder — shared site navigation loaded dynamically -->
     <div id="header"></div>
     <script>
+        // Fetch shared header and highlight current page link in the nav bar
         fetch("header.html")
             .then(res => res.text())
             .then(html =>
             {
                 document.getElementById("header").innerHTML = html;
-
                 const currentPage =
                     window.location.pathname.split("/").pop() || "index.html";
-
                 document.querySelectorAll("nav a").forEach(link =>
                 {
                     if (link.getAttribute("href") === currentPage)
@@ -29,47 +31,119 @@
                 });
             });
     </script>
-    <main class="tech-hero-container">
-        <img src="Images/techhero.webp" alt="Tech Hero">
-        <div class="tech-hero-text">
-            <h2>Michael Running Wolf</h2>
-            <p>
-                Michael Running Wolf is a Native American software engineer and AI researcher dedicated to using
-                technology
-                to preserve Indigenous languages. He is the founder of Indigenous in AI, a platform that elevates
-                Indigenous
-                voices in machine learning and AI research. Running Wolf has a Master's in Computer Science, is a former
-                engineer for Amazon Alexa, former faculty at Northeastern University, and is pursuing a PhD in Computer
-                Science at McGill University.
-            </p>
-            <p>
-                His work focuses on creating automatic speech recognition tools for Indigenous languages, inspired by
-                projects like those preserving the Māori language. Through initiatives such as Buffalo Tongue and FLAIR
-                (First Languages AI Reality), he develops AI and virtual-reality tools to reclaim threatened languages
-                while
-                ensuring Indigenous communities maintain ownership and control over their data.
-            </p>
-            <blockquote class="tech-hero-quote">
 
-                “By elevating the voices of Indigenous ML researchers we will inspire future impactful work and break
-                stereotypes.” - Michael Running Wolf
-            </blockquote>
-            <p>
-                Running Wolf challenges norms in tech by centering Indigenous perspectives in AI,
-                showing that technology can be a tool for empowerment rather than erasure.
-            </p>
-            <div class="tech-hero-links">
+    <!-- Main content area — two tech hero profiles, one per group member -->
+    <main>
+        <div class="page-wrapper">
+            <!-- Page title for the tech heroes section -->
+            <h1 class="section-title">Tech Heroes</h1>
 
-                <h3>Resources & Links:</h3>
+            <!-- Tech Hero 1: Michael Running Wolf — profiled by Arnav -->
+            <div class="tech-hero-section">
+                <img src="Images/techhero.webp"
+                    alt="Photo of Michael Running Wolf, Native American AI researcher and founder of Indigenous in AI">
+                <div class="tech-hero-text">
+                    <h2>Michael Running Wolf</h2>
+                    <!-- Background and credentials -->
+                    <p>
+                        Michael Running Wolf is a Native American software engineer and AI researcher dedicated to using
+                        technology
+                        to preserve Indigenous languages. He is the founder of Indigenous in AI, a platform that elevates
+                        Indigenous
+                        voices in machine learning and AI research. Running Wolf has a Master's in Computer Science, is a
+                        former
+                        engineer for Amazon Alexa, former faculty at Northeastern University, and is pursuing a PhD in
+                        Computer
+                        Science at McGill University.
+                    </p>
+                    <!-- Impact and key projects -->
+                    <p>
+                        His work focuses on creating automatic speech recognition tools for Indigenous languages, inspired
+                        by
+                        projects like those preserving the Māori language. Through initiatives such as Buffalo Tongue and
+                        FLAIR
+                        (First Languages AI Reality), he develops AI and virtual-reality tools to reclaim threatened
+                        languages
+                        while
+                        ensuring Indigenous communities maintain ownership and control over their data.
+                    </p>
+                    <!-- Quote highlighting his mission and values -->
+                    <blockquote class="tech-hero-quote">
+                        "By elevating the voices of Indigenous ML researchers we will inspire future impactful work and
+                        break
+                        stereotypes." — Michael Running Wolf
+                    </blockquote>
+                    <p>
+                        Running Wolf challenges norms in tech by centering Indigenous perspectives in AI,
+                        showing that technology can be a tool for empowerment rather than erasure.
+                    </p>
+                    <!-- External resources and links related to this tech hero -->
+                    <div class="tech-hero-links">
+                        <h3>Resources &amp; Links</h3>
+                        <a href="https://indigenousinai.org/">Indigenous in AI — Organization founded by Running Wolf</a>
+                        <a href="https://www.nature.com/articles/d41586-025-01354-y">Walking in two worlds — Nature</a>
+                        <a href="https://peopleofcolorintech.com/articles/4-indigenous-tech-leaders-you-should-know-about-this-indigenous-peoples-day/#:~:text=3.-,Michael%20Running%20Wolf,-Michael%20Running%20Wolf">Michael
+                            Running Wolf — POCIT</a>
+                    </div>
+                </div>
+            </div>
 
-                <a href="https://indigenousinai.org/">Indigenous in AI - Organization founded by Running Wolf</a>
-                <a href="https://www.nature.com/articles/d41586-025-01354-y">Walking in two worlds - nature</a>
-                <a
-                    href="https://peopleofcolorintech.com/articles/4-indigenous-tech-leaders-you-should-know-about-this-indigenous-peoples-day/#:~:text=3.-,Michael%20Running%20Wolf,-Michael%20Running%20Wolf">Michael
-                    Running Wolf - POCIT</a>
+            <!-- Divider between the two tech hero profiles -->
+            <hr class="hero-divider">
+
+            <!-- Tech Hero 2: Phaedra Ellis-Lamkins — profiled by Siddhanth -->
+            <div class="tech-hero-section">
+                <img src="Images/SJM-L-SVCHAT-0922-02.webp"
+                    alt="Photo of Phaedra Ellis-Lamkins, CEO and co-founder of Promise, a technology company serving underserved communities">
+                <div class="tech-hero-text">
+                    <h2>Phaedra Ellis-Lamkins</h2>
+                    <!-- Background and career history -->
+                    <p>
+                        Phaedra Ellis-Lamkins is a Black social justice advocate and technology entrepreneur dedicated to
+                        using tech to serve low-income communities and communities of color. She is the co-founder and CEO
+                        of Promise, a California-based technology company that partners with government agencies and
+                        utilities to modernize payment systems, compliance monitoring, and public benefits access for
+                        underserved populations. Ellis-Lamkins graduated from California State University, Northridge,
+                        and began her career as a union organizer in San Jose fighting for home healthcare workers and
+                        low-income employees.
+                    </p>
+                    <!-- Impact on environmental justice, music industry, and founding Promise -->
+                    <p>
+                        Before founding Promise, Ellis-Lamkins served as CEO of Green For All, an environmental justice
+                        nonprofit where she fought to ensure clean energy jobs and climate benefits reached disadvantaged
+                        and tribal communities. She also worked with the musician Prince, helping him reclaim ownership
+                        of his master recordings — a fight rooted in the same principles of ownership and equity that
+                        define her career. In 2017, she co-founded Promise, which went through Y Combinator's
+                        accelerator and raised venture capital from firms like First Round Capital and Jay-Z's Roc
+                        Nation. Promise offers interest-free, flexible digital payment plans and uses technology to
+                        connect people to benefits they already qualify for, eliminating burdensome paper applications
+                        that disproportionately harm low-income families.
+                    </p>
+                    <!-- Quote highlighting her mission to build equitable technology -->
+                    <blockquote class="tech-hero-quote">
+                        "There aren't a lot of models of profitable, scalable companies building products for poor people
+                        without being exploitative or predatory. I founded Promise to change that."
+                        — Phaedra Ellis-Lamkins
+                    </blockquote>
+                    <p>
+                        Ellis-Lamkins challenges the implicit bias embedded in Silicon Valley — the assumption that
+                        profitable technology must serve wealthy consumers and that building for poor people means either
+                        charity or exploitation. Her work sits at the intersection of race, class, gender, and
+                        technology, proving that tech can be a tool for equity rather than a driver of inequality.
+                    </p>
+                    <!-- External resources and links related to this tech hero -->
+                    <div class="tech-hero-links">
+                        <h3>Resources &amp; Links</h3>
+                        <a href="https://www.promise-pay.com">Promise Official Website</a>
+                        <a href="https://www.ycombinator.com/blog/promise">Y Combinator Profile on Promise</a>
+                        <a href="https://insider.govtech.com/california/news/ex-labor-organizer-turns-entrepreneur-uses-tech-to-help-governments">GovTech
+                            Interview with Ellis-Lamkins</a>
+                        <a href="https://www.inc.com/magazine/201808/christine-lagorio/how-i-did-it-phaedra-ellis-lamkins-promise.html">Inc.
+                            Magazine Feature</a>
+                    </div>
+                </div>
             </div>
         </div>
-
     </main>
 </body>
 
