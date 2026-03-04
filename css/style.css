@@ -343,8 +343,8 @@ main p {
     color: #e74c3c;
 }
 
-/* Styled button-style link for key resources */
-.resource-link {
+/* Styled button-style link for key resources — uses higher specificity to override .resource-category a */
+.resource-category a.resource-link {
     display: inline-block;
     background-color: #c0392b;
     color: #ffffff;
@@ -356,7 +356,7 @@ main p {
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-.resource-link:hover {
+.resource-category a.resource-link:hover {
     background-color: #e74c3c;
     transform: translateY(-1px);
     color: #ffffff;
